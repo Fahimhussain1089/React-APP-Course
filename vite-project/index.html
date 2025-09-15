@@ -11,3 +11,198 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS PostCSS Configuration Fix</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            content: [
+                "./index.html",
+                "./src/**/*.{js,ts,jsx,tsx}",
+            ],
+            theme: {
+                extend: {},
+            },
+            plugins: [],
+        }
+    </script>
+    <style type="text/css">
+        body {
+            font-family: ui-sans-serif, system-ui, sans-serif;
+            background-color: #f3f4f6;
+        }
+        .error-box {
+            background-color: #fee2e2;
+            border-left: 4px solid #ef4444;
+        }
+        .solution-box {
+            background-color: #dcfce7;
+            border-left: 4px solid #22c55e;
+        }
+        .code-block {
+            background-color: #1f2937;
+            color: #10b981;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+        .file-structure {
+            background-color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">PostCSS Configuration Error Fix</h1>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold text-red-600 mb-4">Error Message</h2>
+            <div class="error-box p-4 rounded mb-4">
+                <p class="text-red-800 font-mono">
+                    ReferenceError: tailwindcss is not defined<br>
+                    at file:///.../postcss.config.js:2:12
+                </p>
+            </div>
+            
+            <h2 class="text-xl font-semibold text-green-600 mb-4">The Problem</h2>
+            <p class="text-gray-700 mb-4">
+                Your PostCSS configuration is trying to use <code class="bg-gray-200 px-1 py-0.5 rounded">tailwindcss</code> as a variable,
+                but it hasn't been imported or defined. This typically happens when using ES module syntax incorrectly.
+            </p>
+            
+            <h2 class="text-xl font-semibold text-green-600 mb-4">The Solution</h2>
+            <div class="solution-box p-4 rounded mb-4">
+                <p class="text-green-800">
+                    You need to fix your <code class="bg-green-200 px-1 py-0.5 rounded">postcss.config.js</code> file to use the correct CommonJS syntax.
+                </p>
+            </div>
+            
+            <h3 class="font-medium text-gray-700 mb-2">Incorrect Configuration (ES Modules):</h3>
+            <div class="code-block">
+                // postcss.config.js (WRONG - ES Modules)<br>
+                export default {<br>
+                &nbsp;&nbsp;plugins: {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;tailwindcss: {}, // This will cause "tailwindcss is not defined" error<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;autoprefixer: {},<br>
+                &nbsp;&nbsp;},<br>
+                }
+            </div>
+            
+            <h3 class="font-medium text-gray-700 mb-2 mt-6">Correct Configuration (CommonJS):</h3>
+            <div class="code-block">
+                // postcss.config.js (CORRECT - CommonJS)<br>
+                module.exports = {<br>
+                &nbsp;&nbsp;plugins: {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;tailwindcss: {},<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;autoprefixer: {},<br>
+                &nbsp;&nbsp;},<br>
+                }
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-xl font-semibold text-blue-600 mb-4">Step-by-Step Fix</h2>
+            
+            <div class="space-y-4">
+                <div>
+                    <h3 class="font-medium text-gray-700 mb-2">1. Update your postcss.config.js file:</h3>
+                    <div class="code-block">
+                        module.exports = {<br>
+                        &nbsp;&nbsp;plugins: {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;tailwindcss: {},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;autoprefixer: {},<br>
+                        &nbsp;&nbsp;},<br>
+                        }
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-medium text-gray-700 mb-2">2. Verify your package.json dependencies:</h3>
+                    <div class="code-block">
+                        "devDependencies": {<br>
+                        &nbsp;&nbsp;"autoprefixer": "^10.4.21",<br>
+                        &nbsp;&nbsp;"postcss": "^8.5.6",<br>
+                        &nbsp;&nbsp;"tailwindcss": "^4.1.13"<br>
+                        }
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-medium text-gray-700 mb-2">3. Ensure your project structure is correct:</h3>
+                    <div class="file-structure">
+                        vite-project/<br>
+                        ├── node_modules/<br>
+                        ├── src/<br>
+                        │   ├── index.css<br>
+                        │   └── main.jsx<br>
+                        ├── postcss.config.js<br>
+                        ├── tailwind.config.js<br>
+                        ├── package.json<br>
+                        └── index.html
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-medium text-gray-700 mb-2">4. Restart your development server:</h3>
+                    <div class="code-block">
+                        npm run dev
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold text-purple-600 mb-4">Complete Configuration Files</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-medium text-gray-700 mb-2">tailwind.config.js</h3>
+                    <div class="code-block">
+                        /** @type {import('tailwindcss').Config} */<br>
+                        module.exports = {<br>
+                        &nbsp;&nbsp;content: [<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"./index.html",<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;"./src/**/*.{js,ts,jsx,tsx}",<br>
+                        &nbsp;&nbsp;],<br>
+                        &nbsp;&nbsp;theme: {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;extend: {},<br>
+                        &nbsp;&nbsp;},<br>
+                        &nbsp;&nbsp;plugins: [],<br>
+                        }
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-medium text-gray-700 mb-2">index.css</h3>
+                    <div class="code-block">
+                        @tailwind base;<br>
+                        @tailwind components;<br>
+                        @tailwind utilities;
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-8 bg-blue-50 rounded-lg p-6">
+            <h2 class="text-xl font-semibold text-blue-800 mb-4">Troubleshooting Tips</h2>
+            <ul class="list-disc pl-5 space-y-2 text-blue-700">
+                <li>Make sure your <code class="bg-blue-100 px-1 py-0.5 rounded">postcss.config.js</code> uses CommonJS syntax (<code class="bg-blue-100 px-1 py-0.5 rounded">module.exports</code>) instead of ES modules</li>
+                <li>Delete your <code class="bg-blue-100 px-1 py-0.5 rounded">node_modules</code> folder and <code class="bg-blue-100 px-1 py-0.5 rounded">package-lock.json</code> file, then run <code class="bg-blue-100 px-1 py-0.5 rounded">npm install</code> again</li>
+                <li>Ensure your main.jsx file imports the CSS file: <code class="bg-blue-100 px-1 py-0.5 rounded">import './index.css'</code></li>
+                <li>Check that all configuration files are in the root directory of your project</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
