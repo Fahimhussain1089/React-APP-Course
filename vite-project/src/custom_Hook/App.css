@@ -1,13 +1,14 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
+
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 5rem;
-  background-color: #e9e90b;
-  text-align: top;
+  padding: 2rem;
+  text-align: center;
+  
 }
 
 .logo {
@@ -55,7 +56,13 @@ input{
   align-items: center;
 }
 .app-container{
-  margin: 20px;
+   margin: 20px;
+  display: inline-block; /* Changed from default block behavior */
+  border: 2px solid #72c0d5; /* Add your desired border style */
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 20px;
+  text-align: left; /* Adjust text alignment as needed */
+  
 }
 
 button{
@@ -84,7 +91,7 @@ h1{
 
 h2,h3{
   text-align: center;
-  color: rgb(14, 1, 1);
+  color: darkgray;
 
 }
 .form-field{
@@ -131,9 +138,10 @@ strong{
 div{
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  background-color: #c6e807;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
@@ -143,7 +151,7 @@ div{
 /*  ======================= MousePossition Project ======================= */
 
 
- /* ======================= Watch Project =======================  */
+/*  ======================= Watch Project ======================= */
 .clock-container{
   display: flex;
   flex-direction: column;
@@ -161,5 +169,4 @@ div{
   padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-} 
-
+}
