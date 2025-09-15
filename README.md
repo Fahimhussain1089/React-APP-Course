@@ -67,4 +67,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/trou<img width="1471" height="855" alt="Screenshot 2025-09-15 at 10 53 47 PM" src="https://github.com/user-attachments/assets/3aa14c87-8416-4cf4-93f0-69c5e2fa8fa5" />
+<img width="1470" height="712" alt="Screenshot 2025-09-15 at 10 51 39 PM" src="https://github.com/user-attachments/assets/51cb700f-85c7-475f-80cc-e4b13efcf5b1" />
+<img width="947" height="777" alt="Screenshot 2025-09-15 at 10 50 37 PM" src="https://github.com/user-attachments/assets/97a6ede3-9c36-4883-869e-800bcb6946d1" />
+<img width="949" height="858" alt="Screenshot 2025-09-15 at 10 53 27 PM" src="https://github.com/user-attachments/assets/4d92d321-9941-4b6e-9ce4-6be2390a2582" />
+<img width="1398" height="857" alt="Screenshot 2025-09-15 at 10 42 05 PM" src="https://github.com/user-attachments/assets/393d5872-1084-463f-b00a-def5c3245ab7" />
+<img width="1472" height="858" alt="Screenshot 2025-09-15 at 10 52 26 PM" src="https://github.com/user-attachments/assets/61792081-6b4b-42bc-a552-692159ee3be0" />
+<img width="1431" height="468" alt="Screenshot 2025-09-15 at 10 52 10 PM" src="https://github.com/user-attachments/assets/d1d0f3e2-a83f-413c-88d2-d532e2529fcd" />
+
+bleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<img width="1471" height="858" alt="Screenshot 2025-09-15 at 10 54 07 PM" src="https://github.com/user-attachments/assets/bc774198-7776-4cca-a7a1-b9c1727ac8fe" />
+
+
+
+
