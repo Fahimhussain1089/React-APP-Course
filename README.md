@@ -75,7 +75,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <img width="1472" height="858" alt="Screenshot 2025-09-15 at 10 52 26 PM" src="https://github.com/user-attachments/assets/61792081-6b4b-42bc-a552-692159ee3be0" />
 <img width="1431" height="468" alt="Screenshot 2025-09-15 at 10 52 10 PM" src="https://github.com/user-attachments/assets/d1d0f3e2-a83f-413c-88d2-d532e2529fcd" />
 
-bleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 <img width="1471" height="858" alt="Screenshot 2025-09-15 at 10 54 07 PM" src="https://github.com/user-attachments/assets/bc774198-7776-4cca-a7a1-b9c1727ac8fe" />
 
